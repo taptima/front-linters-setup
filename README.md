@@ -1,0 +1,2 @@
+# front-linters-setup
+
