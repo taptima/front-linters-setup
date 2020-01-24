@@ -1,7 +1,5 @@
 {
-  "plugins": [
-    "stylelint-scss"
-  ],
+  "plugins": ["stylelint-scss"],
   "rules": {
     "unit-blacklist": ["rem"],
     "shorthand-property-no-redundant-values": true,

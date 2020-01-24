@@ -1,12 +1,6 @@
 {
-  "extends": [
-    "stylelint-config-standard",
-    "stylelint-config-prettier"
-  ],
-  "plugins": [
-    "stylelint-scss",
-    "stylelint-order"
-  ],
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "plugins": ["stylelint-scss", "stylelint-order"],
   "rules": {
     "indentation": 4,
     "at-rule-no-unknown": null,
@@ -16,13 +10,13 @@
     "string-quotes": "single",
     "no-extra-semicolons": true,
     "no-empty-first-line": true,
-    "at-rule-empty-line-before": [ "always", {
-      "except": [
-        "blockless-after-same-name-blockless",
-        "first-nested"
-      ],
-      "ignore": ["after-comment"]
-    } ],
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["blockless-after-same-name-blockless", "first-nested"],
+        "ignore": ["after-comment"]
+      }
+    ],
     "order/properties-order": [
       [
         "content",
@@ -101,24 +95,6 @@
       {
         "unspecified": "bottom"
       }
-    ],
-    "unit-blacklist": ["rem"],
-    "shorthand-property-no-redundant-values": true,
-    "selector-type-no-unknown": true,
-    "selector-pseudo-element-no-unknown": true,
-    "selector-pseudo-class-no-unknown": true,
-    "selector-no-vendor-prefix": true,
-    "selector-no-qualifying-type": true,
-    "selector-attribute-quotes": "always",
-    "property-no-vendor-prefix": true,
-    "property-no-unknown": true,
-    "no-invalid-double-slash-comments": true,
-    "no-empty-source": true,
-    "no-duplicate-at-import-rules": true,
-    "function-url-quotes": "always",
-    "font-family-no-duplicate-names": true,
-    "font-family-name-quotes": "always-unless-keyword",
-    "declaration-no-important": true,
-    "color-no-invalid-hex": true
+    ]
   }
 }

@@ -7,30 +7,12 @@
   "author": "taptima.ru",
   "license": "MIT",
   "private": true,
-  "scripts": {
-    "format": "prettier --write \"**/*.{js,jsx,json,css,scss}\"",
-    "lint-styles": "stylelint \"**/*.{css,scss}\" --fix --config ./.stylelintrc-format"
-  },
   "devDependencies": {
-    "husky": "^4.0.10",
-    "lint-staged": "^10.0.1",
     "prettier": "^1.19.1",
     "stylelint": "^13.0.0",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^19.0.0",
     "stylelint-order": "^4.0.0",
     "stylelint-scss": "^3.13.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{css,scss}": [
-      "prettier --write",
-      "stylelint --fix --config ./.stylelintrc-format"
-    ],
-    "*.{js,jsx,json}": "prettier --write"
   }
 }
