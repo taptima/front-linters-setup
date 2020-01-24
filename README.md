@@ -23,7 +23,7 @@ yarn add husky lint-staged prettier prettier-plugin-twig-melody stylelint stylel
   
 * Also add these commands to **scripts** section of your **package.json**:
 ```
-"format": "prettier --write \"**/*.{js,jsx,json,css,scss,twig}\"",
+"format": "prettier --write \"**/*.{js,jsx,json,css,scss}\"",
 "lint-styles": "stylelint \"**/*.{css,scss}\" --fix --config ./.stylelintrc-format"
 ```
 
