@@ -8,7 +8,6 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "yargs": "^15.1.0",
     "prettier": "^1.19.1",
     "stylelint": "^13.0.0",
     "stylelint-config-prettier": "^8.0.1",

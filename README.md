@@ -1,33 +1,30 @@
 # Front end linters setup
 
-* Install the dependencies: 
+* Installation: 
 ```
-yarn add husky lint-staged prettier prettier-plugin-twig-melody stylelint stylelint-config-prettier stylelint-config-standard stylelint-order stylelint-scss --dev
+yarn add husky lint-staged git+ssh://git@gitlab.fac.im:bolotin/front-linters-setup --dev
 ```
 
-* Add following sections to your **package.json**:
+* Add following scripts to your **package.json**:
+```json
+"scripts": {
+  "format": "prettier \"**/*.{js,jsx,json,css,scss}\" --write --config node_modules/front-linters-setup/configs/prettier/config.json --ignore-path node_modules/front-linters-setup/configs/.ignore",
+  "lint-styles": "stylelint \"**/*.{css,scss}\" --fix --config node_modules/front-linters-setup/configs/stylelint/formatConfig.json --ignore-path node_modules/front-linters-setup/configs/.ignore"
+}
 ```
+
+* Also add these lines to your **package.json** to enable pre-commit hooks
+```json
 "husky": {
   "hooks": {
     "pre-commit": "lint-staged"
   }
 },
 "lint-staged": {
-  "*.{css,scss}": [
-    "prettier --write",
-    "stylelint --fix --config ./.stylelintrc-format"
-  ],
-  "*.{js,jsx,json}": "prettier --write"
+  "*.{js,jsx,json,css,scss}": "prettier --write --config node_modules/front-linters-setup/configs/prettier/config.json --ignore-path node_modules/front-linters-setup/configs/.ignore",
+  "*.{css,scss}": "stylelint --fix --config node_modules/front-linters-setup/configs/stylelint/formatConfig.json --ignore-path node_modules/front-linters-setup/configs/.ignore"
 }
 ```
-  
-* Also add these commands to **scripts** section of your **package.json**:
-```
-"format": "prettier --write \"**/*.{js,jsx,json,css,scss}\"",
-"lint-styles": "stylelint \"**/*.{css,scss}\" --fix --config ./.stylelintrc-format"
-```
-
-* Copy files `.prettierignore`, `.prettierrc`, `.stylelintrc` and `.stylelintrc-format` to root of your project.
 
 Now you have configured linting & formatting of staged .css & .scss files and formatting of staged .js, .jsx & .json 
 files on pre-commit hook.
