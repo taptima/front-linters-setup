@@ -1,5 +1,5 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier", "./baseConfig"],
   "plugins": ["stylelint-scss", "stylelint-order"],
   "rules": {
     "indentation": 4,
