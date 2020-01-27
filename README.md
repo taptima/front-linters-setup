@@ -26,6 +26,13 @@ yarn add husky lint-staged git+ssh://git@gitlab.fac.im:bolotin/front-linters-set
 }
 ```
 
+* Provide stylelint configuration for your editor:
+```json
+"stylelint": {
+  "extends": "./node_modules/front-linters-setup/configs/stylelint/baseConfig.json"
+}
+``` 
+
 Now you have configured linting & formatting of staged .css & .scss files and formatting of staged .js, .jsx & .json 
 files on pre-commit hook.
 
