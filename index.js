@@ -1,5 +1,5 @@
-import { baseConfig, extendedConfig } from './src/configs/stylelint';
-import prettierConfig from './src/configs/prettier';
+import { baseConfig, extendedConfig } from './configs/stylelint';
+import prettierConfig from './configs/prettier/config';
 
 const styleLintConfig = {
     base: baseConfig,
