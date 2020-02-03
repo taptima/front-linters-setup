@@ -8,3 +8,7 @@ yarn.lock
 package-lock.json
 yarn-error.log
 node_modules
+composer.json
+composer.lock
+vendor
+web
