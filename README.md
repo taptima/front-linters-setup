@@ -9,7 +9,8 @@ yarn add husky lint-staged git+ssh://git@gitlab.fac.im:bolotin/front-linters-set
 ```json
 "scripts": {
   "format": "prettier \"**/*.{js,jsx,json,css,scss}\" --write --config node_modules/front-linters-setup/configs/prettier/config.json --ignore-path node_modules/front-linters-setup/configs/.ignore",
-  "lint-styles": "stylelint \"**/*.{css,scss}\" --fix --config node_modules/front-linters-setup/configs/stylelint/formatConfig.json --ignore-path node_modules/front-linters-setup/configs/.ignore"
+  "lint-styles": "stylelint \"**/*.{css,scss}\" --fix --config node_modules/front-linters-setup/configs/stylelint/formatConfig.json --ignore-path node_modules/front-linters-setup/configs/.ignore",
+  "lint-js": "eslint \"**/*.{js,jsx}\" --fix --ignore-path node_modules/front-linters-setup/configs/.ignore"
 }
 ```
 
@@ -22,14 +23,18 @@ yarn add husky lint-staged git+ssh://git@gitlab.fac.im:bolotin/front-linters-set
 },
 "lint-staged": {
   "*.{js,jsx,json,css,scss}": "prettier --write --config node_modules/front-linters-setup/configs/prettier/config.json --ignore-path node_modules/front-linters-setup/configs/.ignore",
-  "*.{css,scss}": "stylelint --fix --config node_modules/front-linters-setup/configs/stylelint/formatConfig.json --ignore-path node_modules/front-linters-setup/configs/.ignore"
+  "*.{css,scss}": "stylelint --fix --config node_modules/front-linters-setup/configs/stylelint/formatConfig.json --ignore-path node_modules/front-linters-setup/configs/.ignore",
+  "*.{js,jsx}": "eslint --fix --ignore-path node_modules/front-linters-setup/configs/.ignore"
 }
 ```
 
-* Provide stylelint configuration for your editor:
+* Provide configurations for your editor:
 ```json
 "stylelint": {
   "extends": "./node_modules/front-linters-setup/configs/stylelint/baseConfig.json"
+},
+"eslintConfig": {
+  "extends": "./configs/eslint/baseConfig.json"
 }
 ``` 
 
