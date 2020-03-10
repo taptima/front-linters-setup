@@ -1,0 +1,16 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "no-plusplus": "off",
+    "import/no-unresolved": "off",
+    "import/no-cycle": ["warn", {
+      "maxDepth": 2
+    }],
+    "no-empty": ["error", {
+      "allowEmptyCatch": true
+    }]
+  }
+}
