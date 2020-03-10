@@ -34,12 +34,11 @@ yarn add husky lint-staged git+ssh://git@gitlab.fac.im:bolotin/front-linters-set
   "extends": "./node_modules/front-linters-setup/configs/stylelint/baseConfig.json"
 },
 "eslintConfig": {
-  "extends": "./configs/eslint/baseConfig.json"
+  "extends": "./node_modules/front-linters-setup/configs/eslint/baseConfig.json"
 }
 ``` 
 
-Now you have configured linting & formatting of staged .css & .scss files and formatting of staged .js, .jsx & .json 
-files on pre-commit hook.
+Now you have configured linting & formatting of staged .css, .scss, .js, .jsx & .json files on pre-commit hook.
 
-You can also format & lint all project .css, .scss, .js, .jsx & .json files using commands `yarn format` 
-& `yarn lint-styles`.
+You can also format & lint all project .css, .scss, .js, .jsx & .json files using commands `yarn format`, 
+`yarn lint-styles` & `yarn lint-js`.
