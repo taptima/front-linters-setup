@@ -28,11 +28,15 @@ yarn add husky lint-staged git+ssh://git@gitlab.fac.im:bolotin/front-linters-set
 }
 ```
 
-* Provide configurations for your editor:
+* Provide stylelint configuration for your editor:
 ```json
 "stylelint": {
   "extends": "./node_modules/front-linters-setup/configs/stylelint/baseConfig.json"
-},
+}
+``` 
+
+* Provide eslint configuration (use `reactConfig.json` for React.js based projects):
+```json
 "eslintConfig": {
   "extends": "./node_modules/front-linters-setup/configs/eslint/baseConfig.json"
 }
