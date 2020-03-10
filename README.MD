@@ -22,9 +22,15 @@ yarn add husky lint-staged git+ssh://git@gitlab.fac.im:bolotin/front-linters-set
   }
 },
 "lint-staged": {
-  "*.{js,jsx,json,css,scss}": "prettier --write --config node_modules/front-linters-setup/configs/prettier/config.json --ignore-path node_modules/front-linters-setup/configs/.ignore",
-  "*.{css,scss}": "stylelint --fix --config node_modules/front-linters-setup/configs/stylelint/formatConfig.json --ignore-path node_modules/front-linters-setup/configs/.ignore",
-  "*.{js,jsx}": "eslint --fix --ignore-path node_modules/front-linters-setup/configs/.ignore"
+"*.{js,jsx}": [
+  "yarn run lint-js",
+  "yarn run format"
+],
+"*.{css,scss}": [
+  "yarn run lint-styles",
+  "yarn run format"
+],
+".json": "yarn run format"
 }
 ```
 
