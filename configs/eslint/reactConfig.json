@@ -1,5 +1,5 @@
 {
-  "extends": ["airbnb", "prettier", "./taptimaBaseConfig", "prettier/react"],
+  "extends": ["airbnb", "./taptimaBaseConfig", "prettier", "prettier/react"],
   "parser": "babel-eslint",
   "rules": {
     "consistent-return": "off",
