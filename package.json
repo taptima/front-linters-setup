@@ -1,6 +1,6 @@
 {
   "name": "front-linters-setup",
-  "version": "1.0.5",
+  "version": "1.0.2",
   "description": "Linters & Prettier setup for Taptima projects",
   "main": "index.js",
   "repository": "git@gitlab.fac.im:bolotin/front-linters-setup.git",
