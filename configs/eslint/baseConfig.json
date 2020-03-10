@@ -1,0 +1,4 @@
+{
+  "extends": ["airbnb-base", "./taptimaBaseConfig", "prettier"],
+  "parser": "babel-eslint"
+}
