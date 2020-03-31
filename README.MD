@@ -1,4 +1,6 @@
 # Front end linters setup
+* NPM update: 
+  Caution! You should manually update package in npm after making changes in repo.
 
 * Installation: 
 ```
