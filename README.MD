@@ -2,7 +2,7 @@
 
 * Installation: 
 ```
-yarn add husky lint-staged git+ssh://git@github.com:taptima/front-linters-setup --dev
+yarn add husky lint-staged @taptima/front-linters-setup --dev
 ```
 
 * Add following scripts to your **package.json**:
